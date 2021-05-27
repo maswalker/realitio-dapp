@@ -29,7 +29,7 @@
   "author": "Kazunori Miura",
   "license": "MIT",
   "dependencies": {
-    "@realitio/realitio-contracts": "^2.2.8",
+    "@realitio/realitio-contracts": "git+https://github.com/maswalker/realitio-contracts.git",
     "@realitio/realitio-lib": "^2.0.2",
     "autoprefixer": "^6.7.0",
     "babel-cli": "^6.22.2",
@@ -39,6 +39,7 @@
     "browserify": "^13.3.0",
     "csso": "^2.3.1",
     "eslint": "^3.15.0",
+    "express": "^4.17.1",
     "gsap": "^1.19.1",
     "imagesloaded": "^4.1.1",
     "interactjs": "1.2.9",

@@ -756,7 +756,7 @@
     "nativeCurrency": {"name":"Ropsten Ether","symbol":"ROP","decimals":18},
     "rpc": ["https://ropsten.infura.io/v3/${INFURA_API_KEY}","wss://ropsten.infura.io/ws/v3/${INFURA_API_KEY}"],
     "faucets": ["https://faucet.ropsten.be?${ADDRESS}"],
-    "infoURL": "https://github.com/ethereum/ropsten",
+    "infoURL": "https://github.com/ethereum/ropsten"
   },
   {
     "name": "RSK Mainnet",
@@ -1622,5 +1622,17 @@
     "rpc": ["https://gwan-ssl.wandevs.org:46891/"],
     "faucets": [],
     "infoURL": "https://testnet.wanscan.org"
+  },
+  {
+    "name": "IOTX Testnet",
+    "chainId": 4690,
+    "shortName": "iotx",
+    "chain": "IOTX",
+    "network": "iotx",
+    "networkId": 4690,
+    "nativeCurrency": {"name":"IOTX coin","symbol":"IOTX","decimals":18},
+    "rpc": ["http://35.184.32.217:8545/"],
+    "faucets": [],
+    "infoURL": "https://testnet.iotex.io"
   }
 ]

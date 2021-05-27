@@ -101,6 +101,7 @@ const BLOCK_EXPLORERS = {
     42: 'https://kovan.etherscan.io',
     77: 'https://blockscout.com/poa/xdai/',
     100: 'https://blockscout.com/poa/xdai/',
+    4690: 'https://iotexscan.io',
     1337: 'https://etherscan.io'
 };
 
@@ -111,6 +112,7 @@ const RPC_NODES = {
     42: 'https://kovan.socialminds.jp',
     77: 'https://sokol.poa.network',
     100: 'https://xdai.poanetwork.dev',
+    4690: 'http://35.184.32.217:8545',
     1337: 'https://localhost:8545'
 };
 
@@ -121,7 +123,8 @@ const START_BLOCKS = {
     4: 3175028, // for quicker loading start more like 4800000,
     42: 10350865,
     77: 17307140,
-    100: 11938534
+    100: 11938534,
+    4690: 8660745
 }
 var START_BLOCK;
 
@@ -1757,7 +1760,7 @@ function updateUserBalanceDisplay() {
         return;
     }
     if (currency == 'ETH') {
-        // console.log('updating balacne for', account);
+        console.log('updating balacne for', account);
         web3js.eth.getBalance(account, function(error, result) {
             // console.log('got updated balacne for', account, result.toNumber());
             if (error === null) {
@@ -4514,6 +4517,8 @@ function initNetwork(net_id) {
     } else {
         START_BLOCK = 1;
     }
+
+    console.log(`START_BLOCK=${START_BLOCK}`);
     return true;
 }
 
@@ -4809,7 +4814,7 @@ window.addEventListener('load', function() {
                 START_BLOCK = CATEGORY_STARTS[net_id][category];
             }
         }
-        //console.log('args:', args);
+        console.log('args:', args);
         web3js.eth.getBlock('latest', function(err, result) {
             if (result.number > current_block_number) {
                 current_block_number = result.number;
